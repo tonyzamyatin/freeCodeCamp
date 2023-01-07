@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title" class="text-centered">
+          Maturaball Theresianum Registrierung
+        </h1>
+        <p id="description" class="text-centered">
+          Vielen Dank, dass Sie zu unserem jährlichen Maturaball kommen. Bitte
+          helfen Sie uns dabei, einen Überblick über die Gäste beizubehalten,
+          indem Sie sich hier registrieren!
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label">Bitte geben Sie Ihren Namen ein: </label
+          ><input
+            id="name"
+            type="text"
+            placeholder="z.B. Max Mustermann"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label">Bitte geben Sie Ihre E-Mail ein: </label
+          ><input
+            id="email"
+            type="email"
+            pattern=".+@globex\.com"
+            size="30"
+            placeholder="z.B. max.mustermann@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label">Wie viele Gäste nehmen Sie mit? </label
+          ><input
+            id="number"
+            type="number"
+            min="0"
+            max="3"
+            placeholder="max. 3"
+          />
+        </div>
+        <div class="form-group">
+          <label>Wer sind Sie?</label>
+          <select id="dropdown" required>
+            <option disabled selected value>
+              Bitte zutreffende Beschreibung auswählen
+            </option>
+            <option value="1">Schüler/in des Theresianums</option>
+            <option value="2">
+              Elternteil einer Theresianistin/ eines Theresianisten
+            </option>
+            <option value="3">
+              Begleitung einer Maturantin/ eines Maturanten
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Wählen Sie eine Ticket-Option aus:</p>
+          <label
+            ><input
+              type="radio"
+              name="ticket option"
+              value="normal ticket"
+              class="inline"
+            />Normales Ticket</label
+          >
+          <label
+            ><input type="radio" name="ticket option"
+            value="premium"/class="inline" >Premium Ticket</label
+          >
+        </div>
+        <div class="form-group">
+          <p>Was würden Sie gerne trinken?</p>
+          <label
+            ><input type="checkbox" value="bier" class="inline" />Bier</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              value="rotwein"
+              class="inline"
+            />Rotwein</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              value="prosseco"
+              class="inline"
+            />Prosseco</label
+          >
+          <label
+            ><input type="checkbox" value="sekt" class="inline" />Sekt</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            >Haben Sie noch irgendwelche Wünsche, Fragen oder Anregungen ans
+            Ballkommittee?</label
+          >
+          <textarea placeholder="Schreibe Sie sie hier rein..."></textarea>
+        </div>
+        <div>
+          <input
+            id="submit"
+            type="submit"
+            value="submit"
+            class="submit-button"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
