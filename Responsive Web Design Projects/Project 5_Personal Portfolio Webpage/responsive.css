@@ -1,0 +1,360 @@
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values. 
+ */
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* Large screens */
+@media (max-width: 1450px) {
+  .intro {
+    margin: 0 5vw 0 5vw;
+  }
+}
+
+@media (max-width: 1350px) {
+  .intro {
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header"
+      "photo text";
+    margin: 0 7.5vw 0 7.5vw;
+  }
+
+  .intro-heading {
+    text-align: center;
+    padding: 0 0 2rem 0;
+  }
+}
+
+/* Medium screens */
+/* 1200px / 16px = 75em */
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* Small screens */
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+
+  .intro {
+    grid-template-columns: 35% 65%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "photo header"
+      "text text";
+    margin: 0 7.5vw 0 7.5vw;
+  }
+
+  .intro-heading {
+    align-self: center;
+    text-align: left;
+    padding: 0 0 0 3rem;
+  }
+
+  .intro-text {
+    padding: 0;
+  }
+}
+
+/* Extra small screens */
+/* 760px / 17px = 47,5em */
+@media (max-width: 47.5em) {
+  nav {
+    padding: 0;
+  }
+
+  nav ul {
+    justify-content: center;
+    font-size: 120%;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "photo"
+      "header"
+      "text";
+    margin: 0 7.5vw 0 7.5vw;
+  }
+
+  .photo-container {
+    justify-self: center;
+    padding: 3rem 0 0 0;
+  }
+
+  .photo {
+    max-width: 35rem;
+  }
+
+  .intro-heading {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .intro-text {
+    hyphens: auto;
+  }
+
+  #contact-details {
+    justify-items: center;
+  }
+
+  #contact-details h1 {
+    font-size: 4rem;
+  }
+}
+
+/* 660px */
+@media (max-width: 41.25em) {
+  .contact-list a {
+    margin: 0 2rem;
+  }
+}
+
+/* 300px */
+@media (max-width: 18.75em) {
+  .intro {
+    margin: 0;
+  }
+}
+
+/* Laptops with 125% scale */
+@media (-webkit-device-pixel-ratio: 1.25) {
+  nav {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 2.2rem;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  .photo {
+    max-width: 35rem;
+  }
+}
+
+/* Laptops with 150% scale */
+@media (-webkit-device-pixel-ratio: 1.5) {
+  body {
+    font-size: 1.7rem;
+  }
+
+  .intro-text {
+    font-size: 1.9rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  /* 1100px */
+  @media (min-width: 68.75em) {
+    .intro {
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "photo header"
+        "photo text";
+      margin: 0 7.5vw;
+    }
+
+    .intro-heading {
+      text-align: left;
+      padding: 0 0 0 4rem;
+    }
+  }
+
+  /* 1100px */
+  @media (max-width: 68.75em) {
+    .intro {
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "photo text";
+      margin: 0 7.5vw;
+    }
+
+    .photo {
+      max-width: 30rem;
+    }
+
+    .intro-text {
+      padding: 0 0 0 1rem;
+    }
+
+    .intro-heading {
+      width: 100%;
+      text-align: center;
+      /* padding: 0 8rem; */
+    }
+  }
+
+  /* 1040px */
+  @media (max-width: 65em) {
+    .intro {
+      margin: 0 6rem;
+    }
+
+    .intro-heading {
+      text-align: center;
+    }
+
+    .intro-text {
+      hyphens: auto;
+    }
+  }
+
+  /* 980px */
+  @media (max-width: 61.25em) {
+    .intro {
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "photo text";
+      margin: 0 5vw;
+    }
+
+    .intro-heading {
+      padding: 0 0 2rem 0;
+    }
+  }
+
+  /* 850px */
+  @media (max-width: 53.125em) {
+    .intro {
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "photo header"
+        "text text";
+      margin: 0 7.5vw;
+    }
+
+    .intro-heading {
+      padding: 0 0 0 3rem;
+      align-self: center;
+      text-align: left;
+    }
+
+    .intro-text {
+      padding: 1rem 0 0 0;
+    }
+  }
+
+  /* 760px */
+  @media (max-width: 47.5em) {
+    nav {
+      padding: 0 5vw;
+    }
+
+    nav ul {
+      justify-content: flex-end;
+      font-size: 100%;
+    }
+
+    .intro {
+      grid-template-columns: 35% 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "photo header"
+        "text text";
+      margin: 0 7.5vw;
+    }
+
+    .photo-container {
+      justify-self: center;
+      padding: 0;
+    }
+
+    .photo {
+      max-width: 30rem;
+    }
+
+    .intro-heading {
+      padding: 0 0 0 3rem;
+      align-self: center;
+      text-align: left;
+    }
+
+    .intro-text {
+      padding: 1rem 0 0 0;
+    }
+  }
+
+  /* 700px */
+  @media (max-width: 43.75em) {
+    nav {
+      padding: 0;
+    }
+
+    nav ul {
+      justify-content: center;
+      font-size: 120%;
+    }
+
+    .intro {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "photo"
+        "header"
+        "text";
+      margin: 0 7.5vw 0 7.5vw;
+    }
+
+    .photo-container {
+      justify-self: center;
+      margin: 3rem 0 0 0;
+    }
+
+    .intro-heading {
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .intro-text {
+      margin: 0;
+      hyphens: auto;
+    }
+  }
+
+  /* 560px */
+  @media (max-width: 35em) {
+    #contact-details h1 {
+      font-size: 3.2rem;
+    }
+  }
+}

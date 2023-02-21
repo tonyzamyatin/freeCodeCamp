@@ -3,9 +3,11 @@
   <head>
     <title>Project #5: Personal Portfolio Webpage</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="hover.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+    />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,300;0,400;0,600;1,200;1,300&display=swap");
     </style>
@@ -24,6 +26,9 @@
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,300;0,400;0,600;1,200;1,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hover.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <script
       src="https://kit.fontawesome.com/907c2520ec.js"
       crossorigin="anonymous"
@@ -32,48 +37,46 @@
 
   <body>
     <!-- START NAV -->
-    <div class="nav-container">
-      <nav id="nav-bar">
-        <ul>
-          <li><a href="#welcome-section">About</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#contact-details">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav id="navbar">
+      <ul>
+        <li class="jump"><a href="#welcome-section">About</a></li>
+        <li class="jump"><a href="#projects">Work</a></li>
+        <li class="jump"><a href="#contact-details">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- END NAV -->
 
     <!-- START WELCOME SECTION -->
 
     <section id="welcome-section">
-      <div class="about-container">
-        <div class="image">
+      <div class="intro">
+        <div class="photo-container">
           <img
-            class="portrait"
+            class="photo"
             src="https://lh3.googleusercontent.com/xZxWLqTqWYcRhK6_8FJRIBpBVh3QiBFhdR8KBbqE5jgyhQNaYxsbpYz8KMukr5a4YTzLB2QP8szbtLEXNEG-wFxkPSCz4O2kO4gc7IF-I_KUGzfcoXTQoo7OOqCz98icoBznb2xV9W0=w2400"
           />
         </div>
-        <div class="about">
-          <h1 class="heading">Hi there!</h1>
-          <h2 class="heading">
+        <div class="intro-heading">
+          <h1>Hi there!</h1>
+          <h3>
             I'm <span id="surname" class="highlight">Tony</span>, a university
-            student studying Computer Science and Biology.
-          </h2>
-          <div class="typewriter">
-            <p>
-              I have a passion for building software, solving complex problems,
-              and exploring new technologies. In my free time, I enjoy reading,
-              tinkering around, or just satisfying my curiosity about the world
-              around me.
-            </p>
-            <p>
-              My goal with this portfolio is to share my projects and
-              experiences, and to connect with other like-minded individuals in
-              the tech industry. Thanks for stopping by, and don't hesitate to
-              reach out if you want to chat or collaborate!
-            </p>
-          </div>
+            student studying Computer&nbsp;Science and Biology.
+          </h3>
+        </div>
+
+        <div class="intro-text">
+          <p>
+            I have a passion for building software, solving complex problems,
+            and exploring new technologies. In my free time, I enjoy reading,
+            tinkering around, or spending time with friends.
+          </p>
+          <p>
+            My goal with this portfolio is to share my projects and experiences,
+            and to connect with other like-minded individuals in the tech
+            industry. Thanks for stopping by, and don't hesitate to reach out if
+            you want to chat or collaborate!
+          </p>
         </div>
       </div>
     </section>
@@ -82,33 +85,135 @@
 
     <!-- START PROJECTS SECTION -->
 
-    <section id="projects" class="project-section">
+    <section id="projects">
       <h2 class="project-section-header">Here are some of my projects</h2>
-      <div class="project-container">
-        <a class="project" href="" target="_blank">
-          <img class="project-image" src="" alt="project" />
-          <p class="project-titel"></p>
-        </a>
+      <div class="projects-container">
+        <div class="flip-card">
+          <div class="flip-card-inner" tabindex="1">
+            <div class="flip-card-front">
+              <img
+                class="project-screenshot"
+                src="https://lh3.googleusercontent.com/gYknnYKvdBcWIOWz9aAaJ2H1op4gQYcud2B9WoHCN6sMv802AEe7Vhln3y2Dgp7TB5-BCPVQfHoY1FIL_Wfo3FhzPCTCn2B7CbJCJ125GrzrtzLVdEI3_0aw76Ub6fUYP43TiqA85fo=w2400"
+              />
+              <h4 class="project-title">Landing Page</h4>
+              <p class="flip-message">Click to see description</p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/tonyzamyatin/freeCodeCamp/tree/main/Responsive%20Web%20Design%20Projects/Project%204_Landing%20Page"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  GitHub <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://codepen.io/C0DER44/full/bGjBLMw"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  Live Demo <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-description">
+                <p>
+                  For the fourth project of the freeCodeCamp Responsive Web
+                  Design Course I decided to build a landing page for a book
+                  club because I love reading.
+                </p>
+                <p>
+                  I'm proud of this project because I took page structure and
+                  design to the next level and made the whole page (mostly)
+                  responsive.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <a class="project" href="" target="_blank">
-          <img class="project-image" src="" alt="project" />
-          <p class="project-titel"></p>
-        </a>
+        <div class="flip-card">
+          <div class="flip-card-inner" tabindex="1">
+            <div class="flip-card-front">
+              <img
+                class="project-screenshot"
+                src="https://lh3.googleusercontent.com/mqvAF5tHcULBfT4C46iFcAKC8jjdksGZGUJoiODILehTmZsyvrrOzqFdNvNaVNTNPvxEBfAq7XTNIxLKDXSa6DzpSkrrPX0ueDletS2UkXfP1e14s9IGacY6DEG4-_Yy9J1FwklyX8Q=w2400"
+              />
+              <h4 class="project-title">Technical Documentation</h4>
+              <p class="flip-message">Click to see description</p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/tonyzamyatin/freeCodeCamp/tree/main/Responsive%20Web%20Design%20Projects/Project%203_Build%20a%20Technical%20Documentation%20Page"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  GitHub <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://codepen.io/C0DER44/full/MWBbQbo"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  Live Demo <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-description">
+                <p>
+                  For the third project of the freeCodeCamp Responsive Web
+                  Design Course I created a technical documentation page for CSS
+                  pseudo elements.
+                </p>
+                <p>
+                  During this project I learned a bit about colors and hues, as
+                  well as page structure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <a class="project" href="" target="_blank">
-          <img class="project-image" src="" alt="project" />
-          <p class="project-titel"></p>
-        </a>
-
-        <a class="project" href="" target="_blank">
-          <img class="project-image" src="" alt="project" />
-          <p class="project-titel"></p>
-        </a>
-
-        <a class="project" href="" target="_blank">
-          <img class="project-image" src="" alt="project" />
-          <p class="project-titel"></p>
-        </a>
+        <div class="flip-card">
+          <div class="flip-card-inner" tabindex="1">
+            <div class="flip-card-front">
+              <img
+                class="project-screenshot"
+                src="https://lh3.googleusercontent.com/_siSl6WuGQO94RHOwF2BdOJ728I11PpEHzW1JBziB4PTK5SawZJI4_mTmWOKnKYW1FpXax-U7PoNOO3_MEl7GwlzQ03SjL6NDXCSMOYyD9FEoPlreYs1F_ZcZxpqfeIncMU5MMwm71Y=w2400"
+              />
+              <h4 class="project-title">Tribute Page</h4>
+              <p class="flip-message">Click to see description</p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/tonyzamyatin/freeCodeCamp/tree/main/Responsive%20Web%20Design%20Projects/Project%203_Build%20a%20Technical%20Documentation%20Page"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  GitHub <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://codepen.io/C0DER44/full/MWBbQbo"
+                  target="_blank"
+                  class="project-link jump"
+                >
+                  Live Demo <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-description">
+                <p>
+                  For the second project of the freeCodeCamp Responsive Web
+                  Design Course I build a tribute page for the famous roman
+                  emperor Marcus Aurelius.
+                </p>
+                <p>
+                  This was on of the first view websites I built. Had a lot of
+                  fun learning the basics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -118,14 +223,16 @@
 
     <section id="contact-details">
       <div class="contact-container">
-        <h1>Let's work together...</h1>
-        <h2>How do you like your coffee?</h2>
+        <div class="contact-heading">
+          <h1>Let's work together...</h1>
+          <h3>How do you like your coffee?</h3>
+        </div>
         <ul class="contact-list">
           <li class="contact">
             <a
               id="linedin-link"
               class="hvr-float"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/anton-zamyatin-a1a379261/"
               traget="_blank"
             >
               <i class="fa-brands fa-linkedin"></i>LinkedIn</a
@@ -135,7 +242,7 @@
             <a
               id="twitter-link"
               class="hvr-float"
-              href="https://twitter.com/?lang=de"
+              href="https://twitter.com/znanton44"
               target="_blank"
             >
               <i class="fa-brands fa-twitter"></i>Twitter</a
@@ -145,7 +252,7 @@
             <a
               id="github-link"
               class="hvr-float"
-              href="https://github.com/"
+              href="https://github.com/tonyzamyatin"
               target="_blank"
             >
               <i class="fa-brands fa-github"></i>GitHub</a
@@ -168,14 +275,15 @@
           </li>
         </ul>
       </div>
+
+      <!-- END CONTACT SECTION -->
+
+      <!-- START FOOTER SECTION -->
+      <footer>
+        <p>Copyright &copy; 2023 Anton Zamyatin</p>
+      </footer>
+
+      <!-- END FOOTER SECTION -->
     </section>
-
-    <!-- END CONTACT SECTION -->
-
-    <!-- START FOOTER SECTION -->
-
-    <footer></footer>
-
-    <!-- END FOOTER SECTION -->
   </body>
 </html>
